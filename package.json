@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Hiaximize/incredibleCutz/issues"
   },
-  "homepage": "https://github.com/Hiaximize/incredibleCutz#readme"
+  "homepage": "https://github.com/Hiaximize/incredibleCutz#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
