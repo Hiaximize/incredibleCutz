@@ -3,9 +3,7 @@ const app = express()
 const router = express.Router()
 
 router.get("/", (req, resp) => {
-    resp.send({
-        message: "hello"
-    })
+    resp.render('index.ejs')
 })
 
 module.exports = router
