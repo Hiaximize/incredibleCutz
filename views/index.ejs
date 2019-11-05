@@ -12,8 +12,8 @@
           <li><a href="#schedule">Schedule Appointment</a></li> -->
         <div id="header">
             <text id="welcomeUserMessage"><% if(currentUser) { %>
-            Welcome, <%=currentUser.username%>!</text>
-            <a href="/app/">Go to your dashboard</a>
+            Welcome, <%=currentUser.username%>!</text><br>
+            <a href="/app/"> GO TO DASHBOARD</a>
             <form action="/sessions?_method=DELETE" method="POST">
               <input type="submit" value="Logout">
             </form>

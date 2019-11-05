@@ -4,9 +4,7 @@ html{
 }
 
 #header{
-    /* border: 1px solid gold; */
     width: 100%;
-    /* z-index: 99; */
 }
 
 .sticky{
@@ -15,7 +13,9 @@ html{
     top: 0;
     left: 0;
     background-color: black;
-    height: 50px;
+    height: 75px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #mainImage{
@@ -85,4 +85,9 @@ a{
     /* align-items: flex-end; */
 }
 
-
+/* @media screen and (max-width: 414px){
+    #mainImage{
+        background-image: url('../images/incredibleCutzMobileLandingPageImage.jpg');
+       
+    }
+} */
