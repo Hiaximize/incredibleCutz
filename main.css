@@ -1,0 +1,43 @@
+html{
+    -webkit-overflow-scrolling: none;
+    overflow-x: hidden;
+}
+
+#mainImage{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/incredibleCutzDesktopLandingPageImage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+}
+
+#theShop{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/theShop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+a{
+    color: white;
+}
