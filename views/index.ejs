@@ -7,21 +7,48 @@
   
     <div class="pageContainer">
       <div class="container backgroundImage" id="mainImage">
-          <% if(currentUser) { %>
-          Welcome, <%=currentUser.username%>!
-          <a href="/app/">Go to your dashboard</a>
-          <form action="/sessions?_method=DELETE" method="POST">
-            <input type="submit" value="Logout">
-          </form>
-          <% } else { %>
+        <div id="header">
+            <text id="welcomeUserMessage"><% if(currentUser) { %>
+            Welcome, <%=currentUser.username%>!</text>
+            <a href="/app/">Go to your dashboard</a>
+            <form action="/sessions?_method=DELETE" method="POST">
+              <input type="submit" value="Logout">
+            </form>
+            <% } else { %>
+            
+            <!-- <a href="/users/new">Sign Up</a> -->
+            <a id="login" href="/sessions/new">Log In</a>
+            <% } %>
+        </div>
           
-          <a href="/users/new">Sign Up</a>
-          <a href="/sessions/new">Log In</a>
-          <% } %>
+         
       </div>
     
       <div class="container" id="services">
-          <p>SERVICES</p>
+          <h3>SERVICES</h3>
+          <p>Appointments Sun-Thurs ONLY</p>
+          <text>45 Minutes $30.00</text>
+
+          <p>VIP Friday & Saturdays ONLY</p>
+          <text>45 Minutes $50.00</text>
+
+          <p>Kids</p>
+          <text>45 Minutes $15.00</text>
+
+          <p>Eyebrows</p>
+          <text>45 Minutes $5.00</text>
+
+          <p>Edges</p>
+          <text>45 Minutes $7.00</text>
+
+          <p>Hot Towel Shave</p>
+          <text>45 Minutes $10.00</text>
+
+          <p>Styled Haircut (Other than an even cut)</p>
+          <text>45 Minutes $20.00</text>
+
+          <p>Even Cuts</p>
+          <text>45 Minutes $15.00</text>
       </div>
 
       <div class="container" id="barbers">
@@ -29,6 +56,10 @@
       </div>
 
       <div class="container" id="theShop">
+      </div>
+
+      <div id="footer">
+
       </div>
     </div>
 </body>
