@@ -4,19 +4,34 @@
 
 form{
     margin: 0 auto;
-    width: 400px;
+    width: 350px;
 }
    
 fieldset{
-    width: 100%;
+    width: 100px;
     border-radius: 6px;
 }
+label{
+    /* border: 1px solid gold; */
+    font-weight: 700;
+    letter-spacing: 4px;
+    background-color: black;
+    /* opacity: .5; */
+}
 input{
-    /* margin: 25px; */
+    margin: 10px;
+    text-align: center;
+    font-size: 15x;
+    border-radius: 6px;
 }
 body{
+    color: white;
     text-align: center;
-    /* background-color: red; */
+    background-image: url('/images/addNewCustomerImage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: 100vw 100vh; */
+   
 }
    
 
