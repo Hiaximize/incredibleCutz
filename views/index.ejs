@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+<body>
+  
+    <div class="pageContainer">
+      <div class="container backgroundImage" id="mainImage">
+          <% if(currentUser) { %>
+          Welcome, <%=currentUser.username%>!
+          <a href="/app/">Go to your dashboard</a>
+          <form action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Logout">
+          </form>
+          <% } else { %>
+          
+          <a href="/users/new">Sign Up</a>
+          <a href="/sessions/new">Log In</a>
+          <% } %>
+      </div>
+    
+      <div class="container" id="services">
+          <p>SERVICES</p>
+      </div>
+
+      <div class="container" id="barbers">
+          <p>BARBERS</p>
+      </div>
+
+      <div class="container" id="theShop">
+      </div>
+    </div>
+</body>
+</html>
