@@ -10,6 +10,7 @@ const userController = require('./controllers/users.js')
 const sessionController = require('./controllers/sessions.js')
 const session = require('express-session')
 const User = require('./models/users.js')
+const customerController = require('./controllers/customers.js')
 
 // MIDDLEWARE
 app.use(express.static('public'))
@@ -43,6 +44,7 @@ app.get('/app', (req, resp)=>{
 
 app.use('/users', userController)
 app.use('/sessions', sessionController)
+app.use('/customers', customerController)
 
 app.listen(port, ()=>{
     console.log("//////////")

@@ -8,7 +8,7 @@ html{
 }
 
 #welcomeUserMessage{
-    justify-content: flex-start;
+    
 }
 
 .fixed{
@@ -44,6 +44,7 @@ body{
 }
 
 #services{
+    text-align: center;
 }
 
 #theShop{
