@@ -1,6 +1,16 @@
-const app = angular.module('MyApp', [])
+console.log("connected")
 
 
-    app.controller('AuthController', ['$http', function($http){
-        this.foo = "bar"
-    }])
+var header = document.getElementById("header")
+console.log(header)
+var sticky = header.offsetTop;
+
+function myFunction(){
+    if(window.pageYOffset > sticky){
+        header.classList.add("sticky")
+    } else {
+        header.classList.remove("sticky")
+    }
+}
+
+window.onscroll = function () { myFunction() };

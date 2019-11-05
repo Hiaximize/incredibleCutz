@@ -6,7 +6,10 @@
 <body>
   
     <div class="pageContainer">
-      <div class="container backgroundImage" id="mainImage">
+      <div class="container" id="mainImage">
+          <!-- <li><a href="#services">HOURS</a></li>
+          <li><a href="#barbers">SERVICES</a></li>
+          <li><a href="#schedule">Schedule Appointment</a></li> -->
         <div id="header">
             <text id="welcomeUserMessage"><% if(currentUser) { %>
             Welcome, <%=currentUser.username%>!</text>
@@ -26,11 +29,11 @@
     
       <div class="container" id="services">
 
-        <table>
-          <th>
+        <table id="hours">
+          <th class="hoursHeader">
             Day
           </th>
-          <th>
+          <th class="hoursHeader">
             Hours
           </th>
           <tr>
@@ -62,7 +65,7 @@
             <td>Closed</td>
           </tr>
         </table>
-          <h3>SERVICES</h3>
+          <!-- <h3>SERVICES</h3>
           <p>Appointments Sun-Thurs ONLY</p>
           <text>45 Minutes $30.00</text>
 
@@ -85,7 +88,7 @@
           <text>45 Minutes $20.00</text>
 
           <p>Even Cuts</p>
-          <text>45 Minutes $15.00</text>
+          <text>45 Minutes $15.00</text> -->
       </div>
 
       <div class="container" id="barbers">
@@ -96,8 +99,23 @@
       </div>
 
       <div id="footer">
-
+          FOOTER
       </div>
     </div>
+    <script>
+
+      window.onscroll = function() {myFunction()}
+
+      var header = document.getElementById("header")
+      var sticky = header.offsetTop
+      
+      function myFunction(){
+        if(window.pageYOffset > sticky){
+          header.classList.add("sticky")
+        } else {
+          header.classList.remove("sticky")
+        }
+      }
+    </script>
 </body>
 </html>

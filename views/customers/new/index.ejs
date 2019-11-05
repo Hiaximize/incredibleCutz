@@ -13,9 +13,10 @@
         <!-- <div id="largerScreenInfo">
             <h1>This page only viewable on mobile devices for checking in customers. Contact Derek to change and allow page to be viewable on desktop</h1>
         </div> -->
-            <h1>New Customer</h1>
-            <form>
+            
+            <form id="addCustomer">
                 <fieldset>
+                    <legend>New Customer</legend>
                     <label for="firstName">First Name:</label>
                     <input type="text" name="firstName" id="firstName">
 
@@ -31,7 +32,7 @@
 
                     <br>
 
-                    <label for="houseNumber">House/Apt Number</label>
+                    <label for="houseNumber">House/Apt Number:</label>
                     <input type="number" name=houseNumber id="houseNumber">
 
                     <br>
@@ -41,20 +42,23 @@
 
                     <br>
 
-                    <label for="city">City</label>
+                    <label for="city">City:</label>
                     <input type="text" name="city" id="city">
 
                     <br>
 
-                    <label for="state">State</label>
+                    <label for="state">State:</label>
                     <input type="text" name="state" id="state">
 
                     <br>
 
-                    <label for="zip">Zip</label>
+                    <label for="zip">Zip:</label>
                     <input type="number" name="zip" id="zip">
+                    
                 </fieldset>
             </form>
+
+            <input type="submit" value="Add Yourself" form="addCustomer" id="submit">
     </div>    
 </body>
 </html>

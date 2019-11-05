@@ -3,8 +3,12 @@
 }
 
 form{
-    margin: 0 auto;
+    margin: 40px auto;
     width: 350px;
+}
+
+legend{
+    font-size: 24px;
 }
    
 fieldset{
@@ -24,14 +28,19 @@ input{
     font-size: 15x;
     border-radius: 6px;
 }
+
+#submit{
+    font-size: 20px;
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+}
 body{
     color: white;
     text-align: center;
     background-image: url('/images/addNewCustomerImage.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    /* background-size: 100vw 100vh; */
-   
 }
    
 

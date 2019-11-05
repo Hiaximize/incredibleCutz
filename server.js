@@ -5,6 +5,7 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const port = process.env.PORT || 3000
 const mongoURI = process.env.MONGODB_URI || process.env.MONGOURI
+const customerMongoURI = process.env.customerMONGOURI || process.env.customers
 // const mongoURI = process.env.mongoDB
 const userController = require('./controllers/users.js')
 const sessionController = require('./controllers/sessions.js')
@@ -27,6 +28,13 @@ mongoose.connect(mongoURI, {useNewUrlParser: true})
 mongoose.connection.once('open', ()=>{
     console.log("connected to: ", mongoURI)
 })
+
+// CUSTOMER DATABASE
+// mongoose.connect(customerMongoURI, {useNewUrlParser: true})
+// mongoose.connection.once('open', ()=>{
+//     console.log('/////////')
+//     console.log("connected to: ", customerMongoURI)
+// })
 
 app.get('/', (req, resp)=>{
     resp.render('index.ejs',
