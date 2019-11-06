@@ -13,7 +13,7 @@ sessions.post('/', (req, resp)=>{
         if(error){
             console.log("something went wrong")
         } else if (!foundUser) {
-           resp.send("User not found")
+           resp.render("wrongPassword.ejs")
         } else {
                 if(bcrypt.compareSync(req.body.password, foundUser.password)){
                 req.session.currentUser = foundUser
