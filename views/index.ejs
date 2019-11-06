@@ -12,11 +12,12 @@
       <div class="container" id="mainImage">
           
         <div id="header">
+          <div id="menuItems">
             <li><a href="#">HOME</a></li>
             <li><a href="#info">SHOP INFO</a></li>
             <li><a href="#barbers">BARBERS</a></li>
             <li><a href="#services">SERVICES</a></li>
-                    
+          </div>        
             <text id="welcomeUserMessage"><% if(currentUser) { %>
             Welcome, <%=currentUser.username%>!</text>
             <a href="/app/"> GO TO DASHBOARD</a>

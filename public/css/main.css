@@ -5,6 +5,12 @@ html{
 
 #header{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menuItems{
+    margin-top: 22px;
 }
 
 .sticky{
@@ -101,7 +107,8 @@ body{
 }
 
 li{
-    list-style: none
+    list-style: none;
+    display: inline;
 }
 
 a{
@@ -134,6 +141,7 @@ a{
 }
 
 .sticky a{
+
     color: #3E8634;
 }
 
