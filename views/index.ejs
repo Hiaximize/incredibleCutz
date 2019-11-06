@@ -12,7 +12,9 @@
       <div class="container" id="mainImage">
           
         <div id="header">
-            <li><a href="#location">SHOP INFO</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#info">SHOP INFO</a></li>
+            <li><a href="#barbers">BARBERS</a></li>
             <li><a href="#services">SERVICES</a></li>
                     
             <text id="welcomeUserMessage"><% if(currentUser) { %>
@@ -28,10 +30,11 @@
       </div>
 
       <!-- SHOP INFO (HOURS AND LOCATION) -->
-    
+
       <div class="container" id="shopInfo">
 
-                <!-- <div id="spacer"></div> -->
+        
+        <div class="spacer" id="info">
                 <table id="hoursOpen">
                   <th class="hoursHeader">
                     Day
@@ -68,28 +71,35 @@
                     <td>Closed</td>
                   </tr>
                 </table>
+        </div>
 
-              <div id="location">
+              <div class="spacer" id="location">
                 <img id="mapScreenshot" src="images/googleMapsScreenshot.png">
-                <p>Located in Colours Plaza</p>
-                <p>3405 SW College Rd #217 <br>
+                <p class="addressPhone">3405 SW College Rd #217
                 Ocala, FL, 34474</p>
-                <p>(352)-207-6952</p>
+                <span><p class="addressPhone">(352)-207-6952</p>
               </div>   
-      
+         
         
       </div>
 
 
       <!-- BARBER INFORMATION -->
 
-      <div class="container" id="barbers">
-          <p>BARBERS</p>
+      <div class="container spacer" id="barbers">
+          <div id="barberImageContainer">
+
+          </div>
+          
+          <div id="barberInformation">
+
+          </div>
       </div>
+
 
       <!-- SERVICES OFFERED -->
 
-      <div class="container" id="services">
+      <div class="container spacer" id="services">
           <!-- <h3>SERVICES</h3> -->
                   <div class="serviceItem">
                     <p>Appointments Sun-Thurs ONLY</p>
@@ -122,7 +132,7 @@
                   </div>
           
                   <div class="serviceItem">
-                    <p>Styled Haircut (Other than an even cut)</p>
+                    <p>Styled Haircut <br>(Other than an even cut)</p>
                     <p>45 Minutes $20.00</p>
                   </div>
           
@@ -134,7 +144,7 @@
 
       <!-- SHOP IMAGE -->
 
-      <div class="container" id="theShop">
+      <div class="container spacer" id="theShop">
         <!-- CONTAINS IMAGE BACKGROUND -->
       </div>
 
@@ -143,6 +153,7 @@
 
       <div id="footer">
           FOOTER
+          <a href="#">TOP</a>
          <% if(!currentUser) { %>
 
           <a href="/sessions/new">Login</a>
@@ -156,6 +167,9 @@
       </div>
     </div>
     <script>
+
+      
+       
 
       window.onscroll = function() {myFunction()}
 
