@@ -6,102 +6,140 @@
 <body>
   
     <div class="pageContainer">
+
+      <!-- LANDING PAGE -->
+
       <div class="container" id="mainImage">
-          <!-- <li><a href="#services">HOURS</a></li>
-          <li><a href="#barbers">SERVICES</a></li>
-          <li><a href="#schedule">Schedule Appointment</a></li> -->
+          
         <div id="header">
+            <li><a href="#location">SHOP INFO</a></li>
+            <li><a href="#services">SERVICES</a></li>
+                    
             <text id="welcomeUserMessage"><% if(currentUser) { %>
             Welcome, <%=currentUser.username%>!</text>
             <a href="/app/"> GO TO DASHBOARD</a>
             <form action="/sessions?_method=DELETE" method="POST">
               <input type="submit" value="Logout">
             </form>
-            <% } else { %>
-
-              <!-- COMMENT THE BELOW LINE OF CODE IN TO ADD NEW ADMINS TO SITE -->
-            
-            <!-- <a href="/users/new">Sign Up</a> -->
-
-
-
-            <!-- <a id="login" href="/sessions/new">Log In</a> -->
             <% } %>
         </div>
           
          
       </div>
+
+      <!-- SHOP INFO (HOURS AND LOCATION) -->
     
-      <div class="container" id="services">
+      <div class="container" id="shopInfo">
 
-        <table id="hours">
-          <th class="hoursHeader">
-            Day
-          </th>
-          <th class="hoursHeader">
-            Hours
-          </th>
-          <tr>
-            <td>Monday</td>
-            <td>9AM-8PM</td>
-          </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td>9AM-8PM</td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td>9AM-8PM</td>
-          </tr>
-          <tr>
-            <td>Thursday</td>
-            <td>9AM-8PM</td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td>8AM-8PM</td>
-          </tr>
-          <tr>
-            <td>Saturday</td>
-            <td>6AM-6PM</td>
-          </tr>
-          <tr>
-            <td>Sunday</td>
-            <td>Closed</td>
-          </tr>
-        </table>
-          <!-- <h3>SERVICES</h3>
-          <p>Appointments Sun-Thurs ONLY</p>
-          <text>45 Minutes $30.00</text>
+                <!-- <div id="spacer"></div> -->
+                <table id="hoursOpen">
+                  <th class="hoursHeader">
+                    Day
+                  </th>
+                  <th class="hoursHeader">
+                    Hours
+                  </th>
+                  <tr>
+                    <td>Monday</td>
+                    <td>9AM-8PM</td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>9AM-8PM</td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>9AM-8PM</td>
+                  </tr>
+                  <tr>
+                    <td>Thursday</td>
+                    <td>9AM-8PM</td>
+                  </tr>
+                  <tr>
+                    <td>Friday</td>
+                    <td>8AM-8PM</td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td>6AM-6PM</td>
+                  </tr>
+                  <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                  </tr>
+                </table>
 
-          <p>VIP Friday & Saturdays ONLY</p>
-          <text>45 Minutes $50.00</text>
-
-          <p>Kids</p>
-          <text>45 Minutes $15.00</text>
-
-          <p>Eyebrows</p>
-          <text>45 Minutes $5.00</text>
-
-          <p>Edges</p>
-          <text>45 Minutes $7.00</text>
-
-          <p>Hot Towel Shave</p>
-          <text>45 Minutes $10.00</text>
-
-          <p>Styled Haircut (Other than an even cut)</p>
-          <text>45 Minutes $20.00</text>
-
-          <p>Even Cuts</p>
-          <text>45 Minutes $15.00</text> -->
+              <div id="location">
+                <img id="mapScreenshot" src="images/googleMapsScreenshot.png">
+                <p>Located in Colours Plaza</p>
+                <p>3405 SW College Rd #217 <br>
+                Ocala, FL, 34474</p>
+                <p>(352)-207-6952</p>
+              </div>   
+      
+        
       </div>
+
+
+      <!-- BARBER INFORMATION -->
 
       <div class="container" id="barbers">
           <p>BARBERS</p>
       </div>
 
-      <div class="container" id="theShop">
+      <!-- SERVICES OFFERED -->
+
+      <div class="container" id="services">
+          <!-- <h3>SERVICES</h3> -->
+                  <div class="serviceItem">
+                    <p>Appointments Sun-Thurs ONLY</p>
+                    <p>45 Minutes $30.00</p>
+                  </div>
+                  
+                  <div class="serviceItem">
+                    <p>VIP Friday & Saturdays ONLY</p>
+                    <p>45 Minutes $50.00</p>
+                  </div>
+          
+                  <div class="serviceItem">
+                    <p>Kids</p>
+                    <p>45 Minutes $15.00</p>
+                  </div>
+          
+                  <div class="serviceItem">
+                    <p>Eyebrows</p>
+                    <p>45 Minutes $5.00</p>
+                  </div>
+          
+                  <div class="serviceItem">
+                    <p>Edges</p>
+                    <p>45 Minutes $7.00</p>
+                  </div>
+
+                  <div class="serviceItem">
+                    <p>Hot Towel Shave</p>
+                    <p>45 Minutes $10.00</p>
+                  </div>
+          
+                  <div class="serviceItem">
+                    <p>Styled Haircut (Other than an even cut)</p>
+                    <p>45 Minutes $20.00</p>
+                  </div>
+          
+                  <div class="serviceItem">
+                    <p>Even Cuts</p>
+                    <p>45 Minutes $15.00</p>
+                  </div>
       </div>
+
+      <!-- SHOP IMAGE -->
+
+      <div class="container" id="theShop">
+        <!-- CONTAINS IMAGE BACKGROUND -->
+      </div>
+
+
+      <!-- FOOTER -->
 
       <div id="footer">
           FOOTER
@@ -110,6 +148,9 @@
           <a href="/sessions/new">Login</a>
         
         <% } %>
+              <!-- COMMENT THE BELOW LINE OF CODE IN TO ADD NEW ADMINS TO SITE -->
+              
+              <!-- <a href="/users/new">Sign Up</a> -->
          
         
       </div>
