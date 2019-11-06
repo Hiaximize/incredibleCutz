@@ -17,14 +17,18 @@
             <li><a href="#info">SHOP INFO</a></li>
             <li><a href="#barbers">BARBERS</a></li>
             <li><a href="#services">SERVICES</a></li>
-          </div>        
+          </div>
+               
+          <div id="authMessage">
             <text id="welcomeUserMessage"><% if(currentUser) { %>
             Welcome, <%=currentUser.username%>!</text>
             <a href="/app/"> GO TO DASHBOARD</a>
             <form action="/sessions?_method=DELETE" method="POST">
               <input type="submit" value="Logout">
             </form>
+          
             <% } %>
+          </div>
         </div>
           
          
@@ -36,13 +40,15 @@
 
         
         <div class="spacer" id="info">
+
                 <table id="hoursOpen">
-                  <th class="hoursHeader">
+                  <h1>HOURS</h1>
+                  <!-- <th>
                     Day
                   </th>
-                  <th class="hoursHeader">
+                  <th>
                     Hours
-                  </th>
+                  </th> -->
                   <tr>
                     <td>Monday</td>
                     <td>9AM-8PM</td>

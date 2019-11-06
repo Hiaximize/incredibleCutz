@@ -3,14 +3,15 @@ html{
     overflow-x: hidden;
 }
 
+#menuItems{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
 #header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-#menuItems{
-    margin-top: 22px;
 }
 
 .sticky{
@@ -141,7 +142,6 @@ a{
 }
 
 .sticky a{
-
     color: #3E8634;
 }
 
