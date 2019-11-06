@@ -12,15 +12,20 @@
           <li><a href="#schedule">Schedule Appointment</a></li> -->
         <div id="header">
             <text id="welcomeUserMessage"><% if(currentUser) { %>
-            Welcome, <%=currentUser.username%>!</text><br>
+            Welcome, <%=currentUser.username%>!</text>
             <a href="/app/"> GO TO DASHBOARD</a>
             <form action="/sessions?_method=DELETE" method="POST">
               <input type="submit" value="Logout">
             </form>
             <% } else { %>
+
+              <!-- COMMENT THE BELOW LINE OF CODE IN TO ADD NEW ADMINS TO SITE -->
             
             <!-- <a href="/users/new">Sign Up</a> -->
-            <a id="login" href="/sessions/new">Log In</a>
+
+
+
+            <!-- <a id="login" href="/sessions/new">Log In</a> -->
             <% } %>
         </div>
           
@@ -100,6 +105,13 @@
 
       <div id="footer">
           FOOTER
+         <% if(!currentUser) { %>
+
+          <a href="/sessions/new">Login</a>
+        
+        <% } %>
+         
+        
       </div>
     </div>
     <script>

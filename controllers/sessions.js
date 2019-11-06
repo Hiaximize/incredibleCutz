@@ -12,14 +12,17 @@ sessions.post('/', (req, resp)=>{
         console.log(foundUser)
         if(error){
             console.log("something went wrong")
+            console.log('////////////////////////')
+            console.log(error)
+            console.log('////////////////////////')
         } else if (!foundUser) {
-           resp.render("wrongPassword.ejs")
+           resp.render("wrongInfo.ejs")
         } else {
                 if(bcrypt.compareSync(req.body.password, foundUser.password)){
                 req.session.currentUser = foundUser
                 resp.redirect('/app/')
             } else {
-                resp.render('wrongPassword.ejs')
+                resp.render('wrongInfo.ejs')
             }
         }
     })
