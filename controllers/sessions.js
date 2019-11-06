@@ -19,7 +19,7 @@ sessions.post('/', (req, resp)=>{
                 req.session.currentUser = foundUser
                 resp.redirect('/app/')
             } else {
-                resp.send('<a href="/">Wrong password</a>')
+                resp.render('wrongPassword.ejs')
             }
         }
     })

@@ -30,11 +30,11 @@ mongoose.connection.once('open', ()=>{
 })
 
 // CUSTOMER DATABASE
-mongoose.connect(customerMongoURI, {useNewUrlParser: true})
-mongoose.connection.once('open', ()=>{
-    console.log('/////////')
-    console.log("connected to: ", customerMongoURI)
-})
+// mongoose.connect(customerMongoURI, {useNewUrlParser: true})
+// mongoose.connection.once('open', ()=>{
+//     console.log('/////////')
+//     console.log("connected to: ", customerMongoURI)
+// })
 
 app.get('/', (req, resp)=>{
     resp.render('index.ejs',

@@ -1,0 +1,29 @@
+#formContainer{
+    border: 1px solid black;
+    height: 680px;
+    width: 800px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+}
+
+#leftSideLogin{
+    border: 1px solid black;
+    height: 100%;
+    width: 65%;
+    background-image: url('../images/login.jpg');
+    background-repeat: no-repeat;
+}
+
+#rightSideLogin{
+    /* background-color: red; */
+    width: 35%;
+    height: 100%;
+    margin: 50px;
+}
+
+form input{
+    font-size: 24px;
+    border-radius: 5px;
+}

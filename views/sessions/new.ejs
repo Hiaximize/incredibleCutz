@@ -1,18 +1,75 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
-   <% include ../partials/head.ejs %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/css/newSession.css" type="text/css" rel="stylesheet">
+    <title>Login</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Log In</h1>
-        <form action="/sessions" method="POST">
-            <label for="loginUsername">Username</label>
-            <input type="text" name="username" placeholder="username" id="loginUsername" required>
-            <label for="loginPassword">Password</label>
-            <input name="password" type="password" id="loginPassword" required>
-            <input type="submit" value="login">
-        </form>
+    <div class="pageContainer">
+        <div id="formContainer">
+            <div id="leftSideLogin">
+
+            </div>
+            <div id="rightSideLogin">
+                <form action="/sessions" method="POST">
+                            <label for="loginUsername">Username</label>
+                            <input type="text" name="username" placeholder="username" id="loginUsername" required>
+                            <br>
+                            <label for="loginPassword">Password</label>
+                            <input name="password" type="password" id="loginPassword" placeholder="Password"
+                                required> <br>
+                            <input type="submit" value="login">
+                </form>
+            </div>
+        </div>
     </div>
+
+
 </body>
+</html>
+
+
+
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="/css/newSession.css" type="text/css" rel="stylesheet">
+        <title>Incredible Cutz Login</title>
+    </head>
+
+    <body>
+        <div class="pageContainer">
+            <div id="formContainer">
+                <div id="leftSideLogin">
+
+                </div>
+                <div id="rightSideLogin">
+                    <h1>Login</h1>
+                    <form action="/sessions" method="POST">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" name="username" placeholder="username" id="loginUsername"
+                            required>
+                        <br>
+                        <label for="loginPassword">Password</label>
+                        <input name="password" type="password" id="loginPassword"
+                            placeholder="Password" required> <br>
+                        <input type="submit" value="login">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
 </html>
