@@ -5,12 +5,11 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const port = process.env.PORT || 3000
 const mongoURI = process.env.MONGODB_URI || process.env.MONGOURI
-const customerMongoURI = process.env.customerMONGOURI || process.env.customers
+// const customerMongoURI = process.env.customerMONGOURI || process.env.customers
 // const mongoURI = process.env.mongoDB
 const userController = require('./controllers/users.js')
 const sessionController = require('./controllers/sessions.js')
 const session = require('express-session')
-const User = require('./models/users.js')
 const customerController = require('./controllers/customers.js')
 
 // MIDDLEWARE
@@ -29,12 +28,8 @@ mongoose.connection.once('open', ()=>{
     console.log("connected to: ", mongoURI)
 })
 
-// CUSTOMER DATABASE
-// mongoose.connect(customerMongoURI, {useNewUrlParser: true})
-// mongoose.connection.once('open', ()=>{
-//     console.log('/////////')
-//     console.log("connected to: ", customerMongoURI)
-// })
+mongoose.set('useFindAndModify', false)
+mongoose.set('useCreateIndex', true)
 
 app.get('/', (req, resp)=>{
     resp.render('index.ejs',
@@ -45,6 +40,16 @@ app.get('/', (req, resp)=>{
 app.get('/app', (req, resp)=>{
     if(req.session.currentUser){
     resp.render('app/index.ejs', {currentUser: req.session.currentUser})
+    } else {
+        resp.redirect('/sessions/new')
+    }
+})
+
+// PUTS THE ADD NEW CUSTOMER FORM ONTO THE SECURE PORTION OF THE PAGE
+
+app.get('/app/customers', (req, resp)=>{
+    if(req.session.currentUser){
+        resp.render('app/new.ejs')
     } else {
         resp.redirect('/sessions/new')
     }

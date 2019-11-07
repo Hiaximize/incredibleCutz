@@ -12,7 +12,7 @@
       <div class="container" id="mainImage">
           
         <div id="header">
-          <div id="menuItems">
+          <div class="nonSticky" id="menuItems">
             <li><a href="#">HOME</a></li>
             <li><a href="#info">SHOP INFO</a></li>
             <li><a href="#barbers">BARBERS</a></li>
@@ -20,13 +20,13 @@
           </div>
                
           <div id="authMessage">
-            <text id="welcomeUserMessage"><% if(currentUser) { %>
-            Welcome, <%=currentUser.username%>!</text>
-            <a href="/app/"> GO TO DASHBOARD</a>
+            <% if(currentUser) { %>
             <form action="/sessions?_method=DELETE" method="POST">
-              <input type="submit" value="Logout">
+              <input id="logout" type="submit" value="Logout">
             </form>
-          
+            <text id="welcomeUserMessage">
+            Welcome, <%=currentUser.username%>!</text>
+            <a id="dashboard" href="/app/">DASHBOARD</a>          
             <% } %>
           </div>
         </div>
@@ -186,6 +186,7 @@
       function myFunction(){
         if(window.pageYOffset > sticky){
           header.classList.add("sticky")
+          header.classList.remove("nonSticky")
         } else {
           header.classList.remove("sticky")
         }

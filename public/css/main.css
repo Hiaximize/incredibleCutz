@@ -8,10 +8,22 @@ html{
     margin-left: 15px;
 }
 
+.nonSticky{
+  
+}
+
 #header{
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+#authMessage{
+    margin-top: 20px;
+}
+
+#logout{
+    margin-bottom: 5px;
 }
 
 .sticky{
@@ -51,8 +63,6 @@ html{
 }
 
 .container{
-    /* padding-top: 200px;
-    margin-top: -100px; */
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -64,6 +74,9 @@ body{
 
 .serviceItem{
     margin: 15px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
 }
 
 #services{
@@ -88,11 +101,9 @@ body{
     background-position: center;
     background-attachment: fixed;
     justify-content: space-evenly;
-    /* margin: 15px; */
 }
 
 #shopInfo{
-    /* padding-top: 200px; */
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 50px auto;
