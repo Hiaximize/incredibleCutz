@@ -5,7 +5,7 @@ const customer = Schema({
     firstName: String,
     lastName: String,
     birthday: Date,
-    phoneNumber: {type: Number, min: 100000000, max: 999999999},
+    phoneNumber: {type: Number, min: 100000000, max: 9999999999},
     houseNumber: Number,
     streetAddress: String,
     city: String,
