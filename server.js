@@ -13,6 +13,7 @@ const session = require('express-session')
 const customerController = require('./controllers/customers.js')
 
 // MIDDLEWARE
+app.use(express.json())
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:false}))
