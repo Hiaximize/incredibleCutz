@@ -21,7 +21,7 @@ customers.post('/', (req, resp)=>{
         if(error){
             console.log(error)
         } else {
-            resp.send(createdUser)
+            resp.json(req.body)
         console.log(req.body)
         console.log(createdUser)
         // resp.redirect('/')
