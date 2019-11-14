@@ -9,9 +9,19 @@ customers.get('/new', (req, resp)=>{
 customers.get('/', (req, resp)=>{
     Customer.find({}, (error, foundCustomers)=>{
         if(error){
-            console.log(error)
+            resp.send(error)
         } else {
             resp.json(foundCustomers)
+        }
+    })
+})
+
+customers.put('/:id', (req, resp)=>{
+    Customer.findOneAndUpdate(req.params.id, req.body, {new: true}, (error, updatedCustomer)=>{
+        if (error){
+            resp.send(error)
+        } else {
+            resp.json(updatedCustomer)
         }
     })
 })
@@ -19,11 +29,9 @@ customers.get('/', (req, resp)=>{
 customers.post('/', (req, resp)=>{
     Customer.create(req.body, (error, createdUser)=>{
         if(error){
-            console.log(error)
+            resp.send(error)
         } else {
             resp.json(req.body)
-        console.log(req.body)
-        console.log(createdUser)
         // resp.redirect('/')
         }
     })
