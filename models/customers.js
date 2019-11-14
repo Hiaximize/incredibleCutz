@@ -13,4 +13,6 @@ const customer = Schema({
     zip: {type: Number, min: 10000, max: 99999}
 })
 
-module.exports = mongoose.model('customer', customer)
+const Customer = mongoose.model('Customer', customer)
+
+module.exports = Customer
