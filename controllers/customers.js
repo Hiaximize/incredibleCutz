@@ -43,7 +43,7 @@ customers.put('/:id', (req, resp)=>{
 
 // DELETE ROUTE
 customers.delete('/:id', (req, resp)=>{
-    Customer.findByIdAndRemove(req,params.id, (error, deletedUser)=>{
+    Customer.findByIdAndRemove(req.params.id, (error, deletedUser)=>{
         if(error){
             resp.send(error)
         } else {
