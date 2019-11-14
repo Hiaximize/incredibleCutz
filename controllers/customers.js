@@ -16,6 +16,16 @@ customers.get('/', (req, resp)=>{
     })
 })
 
+customers.get('/:id', (req, resp)=>{
+    Customer.findById(req.params.id, (error, foundUser)=>{
+        if(error){
+            resp.send(error)
+        } else {
+            resp.json(foundUser)
+        }
+    })
+})
+
 customers.put('/:id', (req, resp)=>{
     Customer.findOneAndUpdate(req.params.id, req.body, {new: true}, (error, updatedCustomer)=>{
         if (error){
