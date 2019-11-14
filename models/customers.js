@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const customer = Schema({
     firstName: String,
     lastName: String,
+    email: String,
     birthday: Date,
     phoneNumber: {type: Number, min: 100000000, max: 9999999999},
     houseNumber: Number,
