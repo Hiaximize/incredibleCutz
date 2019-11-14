@@ -94,19 +94,27 @@
       <!-- BARBER INFORMATION -->
 
       <div class="container spacer" id="barbers">
-          <div id="barberImageContainer">
-
-          </div>
-          
-          <div id="barberInformation">
-
-          </div>
+          <!-- <div class="spacer"> -->
+              <div id="barberImageContainer">
+                  <img id="barberImage" src="#">
+              </div>
+              
+              <div id="barberInformation">
+                    
+                        <p>Name: <p>
+                        <p>Hometown: </p>
+                        <p>Favorite Cut: <p>
+                        <p>What made me decide to start cutting hair: </p>
+                  
+              </div>
+          <!-- </div> -->
       </div>
 
 
       <!-- SERVICES OFFERED -->
 
       <div class="container spacer" id="services">
+       
           <!-- <h3>SERVICES</h3> -->
                   <div class="serviceItem">
                     <p>Appointments Sun-Thurs ONLY</p>
@@ -147,6 +155,8 @@
                     <p>Even Cuts</p>
                     <p>45 Minutes $15.00</p>
                   </div>
+    
+      
       </div>
 
       <!-- SHOP IMAGE -->
@@ -158,20 +168,22 @@
 
       <!-- FOOTER -->
 
-      <div id="footer">
+      <% include ./partials/footer.ejs %>
+
+      <!-- <div id="footer">
           FOOTER
           <a href="#">TOP</a>
          <% if(!currentUser) { %>
 
           <a href="/sessions/new">Login</a>
         
-        <% } %>
+        <% } %> -->
               <!-- COMMENT THE BELOW LINE OF CODE IN TO ADD NEW ADMINS TO SITE -->
               
               <!-- <a href="/users/new">Sign Up</a> -->
          
         
-      </div>
+      <!-- </div> -->
     </div>
     <script>
 

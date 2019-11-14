@@ -4,9 +4,9 @@ const Customer = require('../models/customers.js')
 
 
 // ADD CUSTOMERS 
-customers.get('/new', (req, resp)=>{
-    resp.render('customers/new/index.ejs')
-})
+// customers.get('/new', (req, resp)=>{
+//     resp.render('customers/new/index.ejs')
+// })
 
 // INDEX ROUTE
 customers.get('/', (req, resp)=>{

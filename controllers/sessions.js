@@ -11,10 +11,7 @@ sessions.post('/', (req, resp)=>{
     User.findOne({username: req.body.username}, (error, foundUser)=>{
         console.log(foundUser)
         if(error){
-            console.log("something went wrong")
-            console.log('////////////////////////')
-            console.log(error)
-            console.log('////////////////////////')
+            resp.send(error)
         } else if (!foundUser) {
            resp.render("wrongInfo.ejs")
         } else {

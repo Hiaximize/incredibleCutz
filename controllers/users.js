@@ -4,9 +4,9 @@ const User = require('../models/users.js')
 const bcrypt = require('bcrypt')
 
 // ADD A NEW USER
-users.get('/new', (req, resp)=>[
-    resp.render('users/new.ejs')
-])
+// users.get('/new', (req, resp)=>{
+//     resp.render('app/users/new.ejs')
+// })
 
 // SHOW ALL USERS
 users.get('/', (req, resp)=>{
