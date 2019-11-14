@@ -63,9 +63,10 @@ html{
 }
 
 .container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 body{
@@ -125,7 +126,6 @@ li{
 
 a{
     letter-spacing: 4px;
-    /* color: black; */
     text-decoration: none;
     font-size: 15px;
     align-self: flex-start;
@@ -141,14 +141,15 @@ a{
     justify-content: space-around;
 }
 #barberImageContainer{
-    width: 35%;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border: 1px solid gold;
 }
 
 #barberInformation{
-    width: 42%;
-    height: 550px;
+    width: 400px;
+    height: 400px;
+    flex-direction: column;
     border: 1px solid black;
 }
 

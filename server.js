@@ -5,8 +5,6 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const port = process.env.PORT || 3000
 const mongoURI = process.env.MONGODB_URI || process.env.MONGOURI
-// const customerMongoURI = process.env.customerMONGOURI || process.env.customers
-// const mongoURI = process.env.mongoDB
 const userController = require('./controllers/users.js')
 const sessionController = require('./controllers/sessions.js')
 const session = require('express-session')
@@ -53,6 +51,14 @@ app.get('/app/customers', (req, resp)=>{
         resp.render('app/new.ejs')
     } else {
         resp.redirect('/sessions/new')
+    }
+})
+
+app.get('/app/user/new', (req, resp)=>{
+    if(req.session.currentUser){
+        resp.render('app/users/new.ejs')
+    } else {
+        resp.redirect("/sessions/new")
     }
 })
 
