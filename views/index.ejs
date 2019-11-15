@@ -101,9 +101,9 @@
               
               <div id="barberInformation">
                     
-                        <p>Name: <p>
+                        <p>Name: </p>
                         <p>Hometown: </p>
-                        <p>Favorite Cut: <p>
+                        <p>Favorite Cut: </p>
                         <p>What made me decide to start cutting hair: </p>
                   
               </div>
@@ -118,41 +118,49 @@
           <!-- <h3>SERVICES</h3> -->
                   <div class="serviceItem">
                     <p>Appointments Sun-Thurs ONLY</p>
+                    <img src="#" class="serviceImage">
                     <p>45 Minutes $30.00</p>
                   </div>
                   
                   <div class="serviceItem">
                     <p>VIP Friday & Saturdays ONLY</p>
+                    <img src="/images/VIP.jpg" class="serviceImage">
                     <p>45 Minutes $50.00</p>
                   </div>
           
                   <div class="serviceItem">
                     <p>Kids</p>
+                    <img src="/images/croppedKidsCut.jpg" class="serviceImage">
                     <p>45 Minutes $15.00</p>
                   </div>
           
                   <div class="serviceItem">
                     <p>Eyebrows</p>
+                    <img src="/images/eyebrows.jpg" class="serviceImage">
                     <p>45 Minutes $5.00</p>
                   </div>
           
                   <div class="serviceItem">
                     <p>Edges</p>
+                    <img src="#" class="serviceImage">
                     <p>45 Minutes $7.00</p>
                   </div>
 
                   <div class="serviceItem">
                     <p>Hot Towel Shave</p>
+                    <img src="/images/hotTowelShave.jpg" class="serviceImage">
                     <p>45 Minutes $10.00</p>
                   </div>
           
                   <div class="serviceItem">
                     <p>Styled Haircut <br>(Other than an even cut)</p>
+                    <img src="#" class="serviceImage">
                     <p>45 Minutes $20.00</p>
                   </div>
           
                   <div class="serviceItem">
                     <p>Even Cuts</p>
+                    <img src="#" class="serviceImage">
                     <p>45 Minutes $15.00</p>
                   </div>
     
@@ -170,20 +178,6 @@
 
       <% include ./partials/footer.ejs %>
 
-      <!-- <div id="footer">
-          FOOTER
-          <a href="#">TOP</a>
-         <% if(!currentUser) { %>
-
-          <a href="/sessions/new">Login</a>
-        
-        <% } %> -->
-              <!-- COMMENT THE BELOW LINE OF CODE IN TO ADD NEW ADMINS TO SITE -->
-              
-              <!-- <a href="/users/new">Sign Up</a> -->
-         
-        
-      <!-- </div> -->
     </div>
     <script>
 
@@ -201,6 +195,7 @@
           header.classList.remove("nonSticky")
         } else {
           header.classList.remove("sticky")
+          header.classList.add("nonSticky")
         }
       }
     </script>

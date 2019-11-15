@@ -32,7 +32,7 @@ customers.get('/:id', (req, resp)=>{
 
 // UPDATE ROUTE
 customers.put('/:id', (req, resp)=>{
-    Customer.findOneAndUpdate(req.params.id, req.body, {new: true}, (error, updatedCustomer)=>{
+    Customer.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedCustomer)=>{
         if (error){
             resp.send(error)
         } else {
