@@ -14,9 +14,12 @@
                 <a href="/">Back to site</a>
 
                 <div id="customers">
-                    
-                            <li><%=customers[0].firstName + ' ' + customers[0].lastName%></li>
+
+                        <% for (var i=0; i < customers.length; i++) { %>
                         
+                            <li><%=customers[i].firstName + ' ' + customers[i].lastName%></li>
+
+                       <% } %> 
                 </div>
                 
                 <a href="/app/user/new">Add New Barber</a> <br>
