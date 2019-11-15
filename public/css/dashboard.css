@@ -1,0 +1,57 @@
+
+body{
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+#dashboardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#leftSide{
+    width: 30%;
+    height: 100vh;
+    border-right: 3px solid black;
+    text-align: center;
+    position: fixed;
+    
+}
+
+#rightSide{
+    width: 600px;
+    border: 1px solid blue;
+    /* margin: 0 100px; */
+    /* position: fixed; */
+    margin-left: 38%;
+    overflow: auto;
+}
+
+#customers{
+    width: 95%;
+    height: 525px;
+    border: 1px solid gold;
+    margin: 25px auto;
+}
+
+#customerInfo{
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    
+}
+
+#priceInfo{
+    width: 100%;
+    height: 250px;
+    margin: 20px auto;
+    border: 1px solid purple;
+}
+
+#barbers{
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+    border: 1px solid red;
+}

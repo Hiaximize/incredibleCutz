@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-       <% include ../partials/head.ejs %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/css/dashboard.css" rel="stylesheet" type="text/css">
+    <title>DashBoard</title>
     </head>
     <body>
-        <h1>Welcome <%= currentUser.username %> to your Dashboard</h1>
-        <input type="file">
-        <a href="/app/user/new">Create new Barber</a> <br>
-        <a href="/">Back to site</a>
+        <div id="dashboardContainer">
+            <div id="leftSide">
+                <h4>Welcome <%= currentUser.username %> to your Dashboard</h4>
+                <a href="/">Back to site</a>
+
+                <div id="customers">
+                    
+                </div>
+                
+                <a href="/app/user/new">Add New Barber</a> <br>
+                
+            </div>
+
+            <div id="rightSide">
+                <div id="customerInfo">
+                    <p>First Name:</p>
+                    <p>Last Name:</p>
+                    <p>Email:</p>
+                    <p>Phone Number:</p>
+                    <p>Address:</p>
+                    <p>City:</p>
+                    <p>State:</p>
+                    <p>Zip:</p>
+                </div>
+
+                <div id="priceInfo">
+
+                </div>
+
+                <div id="barbers">
+                    ksjaflkdj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    skafjd
+                </div>
+            </div>
+        </div>
     </body>
 </html>
