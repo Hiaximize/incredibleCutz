@@ -8,13 +8,15 @@ const mongoURI = process.env.MONGODB_URI || process.env.MONGOURI
 const userController = require('./controllers/users.js')
 const sessionController = require('./controllers/sessions.js')
 const session = require('express-session')
-const customerController = require('./controllers/customers.js')
+// const customerController = require('./controllers/customers.js')
+const Customer = require('./models/customers.js')
+
 
 // MIDDLEWARE
 app.use(express.json())
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:true}))
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
@@ -36,12 +38,16 @@ app.get('/', (req, resp)=>{
   
 })
 
+
 app.get('/app', (req, resp)=>{
-    if(req.session.currentUser){
-    resp.render('app/index.ejs', {currentUser: req.session.currentUser})
+    Customer.find({}, (error, foundCustomers)=>{
+    
+    if(req.session.currentUser){ 
+    resp.render('app/index.ejs', {currentUser: req.session.currentUser, customers : foundCustomers})
     } else {
         resp.redirect('/sessions/new')
-    }
+    }})
+
 })
 
 // PUTS THE ADD NEW CUSTOMER FORM ONTO THE SECURE PORTION OF THE PAGE
@@ -54,6 +60,7 @@ app.get('/app/customers', (req, resp)=>{
     }
 })
 
+
 app.get('/app/user/new', (req, resp)=>{
     if(req.session.currentUser){
         resp.render('app/users/new.ejs')
@@ -64,7 +71,7 @@ app.get('/app/user/new', (req, resp)=>{
 
 app.use('/users', userController)
 app.use('/sessions', sessionController)
-app.use('/customers', customerController)
+// app.use('/customers', customerController)
 
 app.listen(port, ()=>{
     console.log("//////////")

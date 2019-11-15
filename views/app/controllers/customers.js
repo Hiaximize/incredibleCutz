@@ -2,7 +2,6 @@ const express = require('express')
 const customers = express.Router()
 const Customer = require('../models/customers.js')
 
-
 // INDEX ROUTE
 customers.get('/', (req, resp)=>{
     Customer.find({}, (error, foundCustomers)=>{
