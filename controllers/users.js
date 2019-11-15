@@ -32,7 +32,7 @@ users.get('/:id', (req, resp)=>{
 
 // UPDATE USER
 users.put('/:id', (req, resp)=>{
-    User.findById(req.params.id, req.body, {new: true}, (error, foundUser)=>{
+    User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, foundUser)=>{
         if(error){
             resp.send(error)
         } else {
@@ -53,6 +53,21 @@ users.post('/', (req, resp)=>{
         }
     })
     
+})
+
+// DELETE USER
+
+users.delete('/:id', (req, resp)=>{
+    User.findByIdAndRemove(req.params.id, (error, deletedUser)=>{
+        if(error){
+            resp.send(error)
+        } else {
+            resp.json({
+                deleted: true,
+                deletedUser: deletedUser
+            })
+        }
+    })
 })
 
 module.exports = users
