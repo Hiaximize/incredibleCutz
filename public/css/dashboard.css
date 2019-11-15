@@ -1,4 +1,6 @@
-
+html{
+    min-width: 800px;
+}
 body{
     margin: 0;
     /* overflow: hidden; */
