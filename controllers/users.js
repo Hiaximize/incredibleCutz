@@ -30,8 +30,12 @@ users.get('/:id', (req, resp)=>{
     })
 })
 
+// NEED TO FINISH UPDATE PASSWORD /////////////////
 // UPDATE USER
 users.put('/:id', (req, resp)=>{
+
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+
     User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, foundUser)=>{
         if(error){
             resp.send(error)
@@ -40,6 +44,7 @@ users.put('/:id', (req, resp)=>{
         }
     })
 })
+///////////////////////////////////////////
 
 // CREATE USER
 users.post('/', (req, resp)=>{
