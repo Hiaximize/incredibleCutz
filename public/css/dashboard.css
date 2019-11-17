@@ -62,6 +62,10 @@ body{
     letter-spacing: 1px;
 }
 
+.barberName{
+    list-style: none;
+}
+
 .info{
     padding-left: 14px;
 }
