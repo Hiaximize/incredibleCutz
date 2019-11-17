@@ -11,7 +11,7 @@
         <div id="dashboardContainer">
             <div id="leftSide">
                 <h4>Welcome <i><%= currentUser.username %></i>, to your Dashboard</h4>
-                <a href="/">Back to site</a>
+                
                 <form action="/sessions?_method=DELETE" method="POST">
                     <input id="logout" type="submit" value="Logout">
                 </form>
@@ -26,6 +26,7 @@
                 </div>
                 
                 <a href="/app/user/new">Add New Barber</a> <br>
+                <a href="/">Back to site</a>
                 
             </div>
 

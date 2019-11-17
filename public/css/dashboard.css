@@ -56,6 +56,10 @@ body{
     height: 300px;
     margin: 20px auto;
     border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .customerName{
@@ -65,7 +69,12 @@ body{
 }
 
 .barberName{
+    align-self: center;
     list-style: none;
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    border: 1px solid black;
 }
 
 .info{
