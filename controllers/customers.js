@@ -1,10 +1,20 @@
 const express = require('express')
 const customers = express.Router()
 const Customer = require('../models/customers.js')
+require('dotenv').config()
+const sessionController = require('../controllers/sessions.js')
+const session = require('express-session')
 
+
+customers.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
 
 // INDEX ROUTE
 customers.get('/', (req, resp)=>{
+    if(req.session.currentUser){
     Customer.find({}, (error, foundCustomers)=>{
         if(error){
             resp.send(error)
@@ -12,6 +22,7 @@ customers.get('/', (req, resp)=>{
             resp.json(foundCustomers)
         }
     })
+    }
 })
 
 // SHOW ROUTE
@@ -61,5 +72,7 @@ customers.post('/', (req, resp)=>{
         }
     })
 })
+
+customers.use('/sessions', sessionController)
 
 module.exports = customers

@@ -1,5 +1,6 @@
 html{
     min-width: 800px;
+    /* min-width: 1000px; */
 }
 body{
     margin: 0;
@@ -9,7 +10,7 @@ body{
 #dashboardContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: center; */
 }
 
 #leftSide{
@@ -25,14 +26,15 @@ body{
     width: 600px;
     border: 1px solid blue;
     margin-left: 38%;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 #customers{
     width: 95%;
-    height: 525px;
+    height: 600px;
     border: 1px solid gold;
     margin: 25px auto;
+    overflow-y: scroll;
 }
 
 #customerInfo{
