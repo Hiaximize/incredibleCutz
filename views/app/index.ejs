@@ -12,6 +12,9 @@
             <div id="leftSide">
                 <h4>Welcome <i><%= currentUser.username %></i>, to your Dashboard</h4>
                 <a href="/">Back to site</a>
+                <form action="/sessions?_method=DELETE" method="POST">
+                    <input id="logout" type="submit" value="Logout">
+                </form>
 
                 <div id="customers">
                         <h4>Customers</h4> <h5>Count: <%=customers.length %></h5>
