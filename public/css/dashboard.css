@@ -24,8 +24,6 @@ body{
 #rightSide{
     width: 600px;
     border: 1px solid blue;
-    /* margin: 0 100px; */
-    /* position: fixed; */
     margin-left: 38%;
     overflow: auto;
 }
@@ -61,5 +59,9 @@ body{
 .customerName{
     list-style: none;
     margin: 15px auto;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.info{
+    padding-left: 14px;
 }

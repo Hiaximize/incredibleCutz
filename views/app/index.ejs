@@ -17,7 +17,7 @@
                         <h4>Customers</h4> <h5>Count: <%=customers.length %></h5>
                         <% for (var i=0; i < customers.length; i++) { %>
                         
-                            <a href="#"><li class="customerName"><%=customers[i].firstName + ' ' + customers[i].lastName%></li></a>
+                            <a href="#"><li class="customerName info"><%=customers[i].firstName + ' ' + customers[i].lastName%></li></a>
 
                        <% } %> 
                 </div>
@@ -28,14 +28,14 @@
 
             <div id="rightSide">
                 <div id="customerInfo">
-                    <p>First Name:</p>
-                    <p>Last Name:</p>
-                    <p>Email:</p>
-                    <p>Phone Number:</p>
-                    <p>Address:</p>
-                    <p>City:</p>
-                    <p>State:</p>
-                    <p>Zip:</p>
+                    <p class="info">First Name:</p>
+                    <p class="info">Last Name:</p>
+                    <p class="info">Email:</p>
+                    <p class="info">Phone Number:</p>
+                    <p class="info">Address:</p>
+                    <p class="info">City:</p>
+                    <p class="info">State:</p>
+                    <p class="info">Zip:</p>
                 </div>
 
                 <div id="priceInfo">
@@ -46,7 +46,7 @@
                         <% for (var i=0; i < barbers.length; i++) { %>
                         
                         <a href="#">
-                            <li class="customerName"><%=barbers[i].firstName + ' ' + barbers[i].lastName%></li>
+                            <li class="barberName info"><%=barbers[i].firstName + ' ' + barbers[i].lastName%></li>
                         </a>
                         
                         <% } %>
