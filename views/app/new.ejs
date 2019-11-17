@@ -14,7 +14,7 @@
             <h1>This page only viewable on mobile devices for checking in customers. Contact Derek to change and allow page to be viewable on desktop</h1>
         </div> -->
             
-            <form id="addCustomer">
+            <form id="addCustomer" method="POST" action="/customers">
                 <fieldset>
                     <legend>New Customer</legend>
                     <label for="firstName">First Name:</label>
@@ -24,6 +24,11 @@
                     
                     <label for="lastName">Last Name:</label>
                     <input type="text" name="lastName" id="lastName">
+
+                    <br>
+
+                    <label for="email">Last Name:</label>
+                    <input type="text" name="email" id="email">
 
                     <br>
 
