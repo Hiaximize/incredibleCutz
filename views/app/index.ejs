@@ -11,13 +11,15 @@
         <div id="dashboardContainer">
             <div id="leftSide">
                 <h4>Welcome <i><%= currentUser.username %></i>, to your Dashboard</h4>
+
+                <img src="#" id="profilePic">
                 
                 <form action="/sessions?_method=DELETE" method="POST">
                     <input id="logout" type="submit" value="Logout">
                 </form>
-
+                <span><%=customers.length %>: Customers</span>
                 <div id="customers">
-                        <h4>Customers</h4> <h5>Count: <%=customers.length %></h5>
+                        
                         <% for (var i=0; i < customers.length; i++) { %>
                         
                             <a href="#"><li class="customerName info"><%=customers[i].firstName + ' ' + customers[i].lastName%></li></a>
@@ -25,8 +27,9 @@
                        <% } %> 
                 </div>
                 
-                <a href="/app/user/new">Add New Barber</a> <br>
-                <a href="/">Back to site</a>
+                <a id="addBarber" href="/app/user/new">Add New Barber</a>
+                <br>
+                <a id="backToSite" href="/">Back to site</a>
                 
             </div>
 
