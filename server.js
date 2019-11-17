@@ -10,6 +10,7 @@ const sessionController = require('./controllers/sessions.js')
 const session = require('express-session')
 const customerController = require('./controllers/customers.js')
 const Customer = require('./models/customers.js')
+const User = require('./models/users.js')
 
 
 // MIDDLEWARE
@@ -40,13 +41,20 @@ app.get('/', (req, resp)=>{
 
 
 app.get('/app', (req, resp)=>{
+    User.find({}, (error, foundUsers)=>{
+        if(error){
+            resp.send(error)
+        }
     Customer.find({}, (error, foundCustomers)=>{
-    
+        if(error){
+            resp.send(error)
+        }
     if(req.session.currentUser){ 
-    resp.render('app/index.ejs', {currentUser: req.session.currentUser, customers : foundCustomers})
+    resp.render('app/index.ejs', {currentUser: req.session.currentUser, customers : foundCustomers, barbers: foundUsers})
     } else {
         resp.redirect('/sessions/new')
     }})
+})
 
 })
 

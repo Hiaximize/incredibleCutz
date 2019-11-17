@@ -43,7 +43,13 @@
                 </div>
 
                 <div id="barbers">
-
+                        <% for (var i=0; i < barbers.length; i++) { %>
+                        
+                        <a href="#">
+                            <li class="customerName"><%=barbers[i].firstName + ' ' + barbers[i].lastName%></li>
+                        </a>
+                        
+                        <% } %>
 
                 </div>
             </div>
