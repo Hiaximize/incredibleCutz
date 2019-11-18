@@ -1,10 +1,10 @@
 console.log("connected")
 
 
-const getInfo=()=>{
+const getInfo=(_id)=>{
     $.ajax({
         method: "GET",
-        url: "http://incrediblecutz.herokuapp.com/customers/"
+        url: "http://incrediblecutz.herokuapp.com/customers/" +_id
     }).then((data) => {
         console.log(data)
     })
