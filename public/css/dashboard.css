@@ -95,6 +95,7 @@ body{
     margin: 15px auto;
     letter-spacing: 1px;
     border: 1px solid black;
+    padding: 2px;
 }
 
 .barberName{
