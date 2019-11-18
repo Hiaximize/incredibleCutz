@@ -17,14 +17,14 @@
                 <form action="/sessions?_method=DELETE" method="POST">
                     <input id="logout" type="submit" value="Logout">
                 </form>
-                <span><%=customers.length %>: Customers</span>
+                <span><%=customers.length %>: Clients</span>
                 <div id="customers">
                         
                         <% for (var i=0; i < customers.length; i++) { %>
                         
                             <a href="#"><li class="customerName info"><%=customers[i].firstName + ' ' + customers[i].lastName%></li></a>
-
-                       <% } %> 
+                        <% } %>
+                      
                 </div>
                 
                 <a id="addBarber" href="/app/user/new">Add New Barber</a>
@@ -34,16 +34,23 @@
             </div>
 
             <div id="rightSide">
-                <div id="customerInfo">
-                    <p class="info">First Name:</p>
-                    <p class="info">Last Name:</p>
-                    <p class="info">Email:</p>
-                    <p class="info">Phone Number:</p>
-                    <p class="info">Address:</p>
-                    <p class="info">City:</p>
-                    <p class="info">State:</p>
-                    <p class="info">Zip:</p>
+                <div id="topLevelContainer">
+                    <div id="customerInfo">
+                        <p class="info">First Name: <%=customers.firstName %></p>
+                        <p class="info">Last Name:</p>
+                        <p class="info">Email:</p>
+                        <p class="info">Phone Number:</p>
+                        <p class="info">Address:</p>
+                        <p class="info">City:</p>
+                        <p class="info">State:</p>
+                        <p class="info">Zip:</p>
+                    </div>
+                    <div id="customerNotesContainer">
+                        <textarea placeholder="notes" id="customerNotes"></textarea>
+                    </div>
                 </div>
+
+                
 
                 <div id="priceInfo">
 

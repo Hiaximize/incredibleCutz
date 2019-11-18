@@ -11,7 +11,8 @@ const customer = Schema({
     streetAddress: String,
     city: String,
     state: String,
-    zip: {type: Number, min: 10000, max: 99999}
+    zip: {type: Number, min: 10000, max: 99999},
+    favoriteBarber: String
 })
 
 const Customer = mongoose.model('Customer', customer)
