@@ -110,3 +110,7 @@ body{
 .info{
     padding-left: 14px;
 }
+
+a{
+    text-decoration: none;
+}
