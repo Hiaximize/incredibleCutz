@@ -6,3 +6,7 @@ $.ajax({
 }).then((data)=>{
     console.log(data)
 })
+
+const getInfo =(_id)=>{
+    console.log(_id)
+}
