@@ -22,7 +22,7 @@
                         <li><%=customers._id%></li>
                         <% for (var i=0; i < customers.length; i++) { %>
                         
-                            <li onclick="(function(){console.log(customers);})()" id="customer<%=i%>" class="customerName info"><%= 'id is ' + customers[i]._id + ' ' + customers[i].firstName + ' ' + customers[i].lastName%></li>
+                            <li onclick="(function(){console.log(customers[i]);})()" id="customer<%=i%>" class="customerName info"><%= 'id is ' + customers[i]._id + ' ' + customers[i].firstName + ' ' + customers[i].lastName%></li>
                         <% } %>
                       
                 </div>
