@@ -10,6 +10,11 @@ html{
 
 .menuLink{
     color: white;
+    justify-content: flex-start;
+    border: 1px solid black;
+    background-color: black;
+    padding: 4px;
+    font-size: 20px;
 }
 
 #menuItems{
@@ -30,6 +35,7 @@ html{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-self: flex-start;
 }
 
 #authMessage{
@@ -176,6 +182,14 @@ a{
 
 #footer{
     height: 100px;
+}
+
+#dashboard{
+    color: white;
+}
+
+#dashboard:hover{
+    color: green;
 }
 
 /* @media screen and (max-width: 414px){
