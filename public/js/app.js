@@ -7,6 +7,6 @@ $.ajax({
     console.log(data)
 })
 
-const getInfo =(customers_id)=>{
-    console.log(customers_id)
+const getInfo =(_id)=>{
+    console.log(_id)
 }
