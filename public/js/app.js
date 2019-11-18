@@ -7,6 +7,11 @@ $.ajax({
     console.log(data)
 })
 
-const getInfo =(_id)=>{
-    console.log(_id)
+const getInfo=(_id)=>{
+    $.ajax({
+        method: "GET",
+        url: "http://incrediblecutz.herokuapp.com/customers/"+_id
+    }).then((data)=>{
+        console.log(data)
+    })
 }
