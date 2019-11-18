@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/css/dashboard.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
     <title>DashBoard</title>
     </head>
     <body>
         <div id="dashboardContainer">
             <div id="leftSide">
-                <h4>Welcome <i><%= currentUser.username %></i>, to your Dashboard</h4>
+                <h4 id="welcomeMessage">Welcome <i><%= currentUser.username %></i></h4>
 
                 <img src="/images/profileImage.png" id="profilePic">
                 
@@ -33,7 +34,6 @@
 
                 <% } %> 
 
-                <br>
                 <br>
                 <a id="backToSite" href="/">Back to site</a>
                 

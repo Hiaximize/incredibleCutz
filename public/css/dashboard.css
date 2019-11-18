@@ -1,6 +1,6 @@
-/* html{
-    font-family: 
-} */
+html{
+    font-family: 'Calistoga', cursive;
+}
 body{
     margin: 0;
     background-color: #cccccc;
@@ -23,7 +23,7 @@ body{
     text-align: center;
     position: fixed;  
     z-index: 99; 
-    background-color: #b2b2b2; 
+    background-color: #4c4c4c; 
     /* color: white; */
 }
 
@@ -52,6 +52,7 @@ body{
     margin: 10px auto;
     overflow-y: scroll;
     border-radius: 6px;
+    background-color: #b2b2b2b2;
 }
 
 #topLevelContainer{
@@ -134,4 +135,13 @@ a{
 
 .title{
     text-align: center;
+}
+
+#welcomeMessage{
+    color: #7fff00;
+    font-size: 15px;
+}
+
+i {
+    text-transform: uppercase;
 }

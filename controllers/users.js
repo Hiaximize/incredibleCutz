@@ -54,7 +54,7 @@ users.post('/', (req, resp)=>{
             resp.send(error)
         } else {
             console.log(createdUser)
-            resp.redirect('/')
+            resp.redirect('/app')
         }
     })
     
