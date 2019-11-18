@@ -22,7 +22,7 @@
                         
                         <% for (var i=0; i < customers.length; i++) { %>
                         
-                            <a id="customer<%=i%>"href="#"><li class="customerName info"><%=customers[i].firstName + ' ' + customers[i].lastName%></li></a>
+                            <li id="customer<%=i%>" class="customerName info"><%=customers[i].firstName + ' ' + customers[i].lastName%></li>
                         <% } %>
                       
                 </div>
@@ -36,7 +36,7 @@
             <div id="rightSide">
                 <div id="topLevelContainer">
                     <div id="customerInfo">
-                        <p class="info">First Name: <%=customers.firstName %></p>
+                        <p class="info">First Name:</p>
                         <p class="info">Last Name:</p>
                         <p class="info">Email:</p>
                         <p class="info">Phone Number:</p>
