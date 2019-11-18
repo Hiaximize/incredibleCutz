@@ -19,15 +19,16 @@
                 </form>
                 <span><%=customers.length %>: Clients</span>
                 <div id="customers">
-                        <li><%=customers[0]._id%></li>
+                        <li><%=customers._id%></li>
                         <% for (var i=0; i < customers.length; i++) { %>
                         
-                            <li id="customer<%=i%>" class="customerName info"><%= 'id is ' + customers[i]._id + ' ' + customers[i].firstName + ' ' + customers[i].lastName%></li>
+                            <li onclick="(function(){console.log(customers);})()" id="customer<%=i%>" class="customerName info"><%= 'id is ' + customers[i]._id + ' ' + customers[i].firstName + ' ' + customers[i].lastName%></li>
                         <% } %>
                       
                 </div>
                 
                 <a id="addBarber" href="/app/user/new">Add New Barber</a>
+                <br>
                 <br>
                 <a id="backToSite" href="/">Back to site</a>
                 
