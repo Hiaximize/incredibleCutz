@@ -1,9 +1,14 @@
-html{
-
-}
+/* html{
+    font-family: 
+} */
 body{
     margin: 0;
+    background-color: #cccccc;
 }
+
+/* body::-webkit-scrollbar{
+    width: 0;
+} */
 
 #dashboardContainer{
     display: flex;
@@ -18,7 +23,7 @@ body{
     text-align: center;
     position: fixed;  
     z-index: 99; 
-    /* background-color: black;  */
+    background-color: #b2b2b2; 
     /* color: white; */
 }
 
@@ -26,6 +31,7 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    border: 1px solid black;
 }
 
 #logout{
@@ -33,9 +39,9 @@ body{
 }
 
 #rightSide{
+    width: 100%;
     min-width: 375px;
     margin-left: 375px;
-    /* border: 1px solid blue; */
     align-self: flex-start;
 }
 
@@ -45,21 +51,24 @@ body{
     border: 1px solid black;
     margin: 10px auto;
     overflow-y: scroll;
+    border-radius: 6px;
 }
 
 #topLevelContainer{
-    width: 100%;
+    width: 98%;
     margin: 0 auto;
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
+    border-radius: 20px;
+    background-color: #e5e5e5;
 }
 #customerInfo{
     min-width: 300px;
 }
 #customerNotesContainer{
     min-width: 300px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 #customerNotes{
@@ -73,21 +82,25 @@ body{
 }
 
 #priceInfo{
-    width: 100%;
+    width: 98%;
     height: 250px;
     margin: 20px auto;
-    border: 1px solid purple;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+    border: 1px solid black;
 }
 
 #barbers{
-    width: 100%;
+    width: 98%;
     height: 100%;
+    border-radius: 20px;
+    background-color: #e5e5e5;
     margin: 20px auto;
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    border: 1px solid black;
 }
 
 .customerName{
@@ -114,4 +127,8 @@ body{
 
 a{
     text-decoration: none;
+}
+
+.title{
+    text-align: center;
 }

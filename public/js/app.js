@@ -1,7 +1,7 @@
 console.log("connected")
 
 
-const getInfo=(event, _id)=>{
+const getInfo=(_id)=>{
     $.ajax({
         method: "GET",
         url: "http://incrediblecutz.herokuapp.com/customers/" +_id
