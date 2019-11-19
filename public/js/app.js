@@ -16,6 +16,8 @@ $.ajax({
     method: "GET",
     url: "http://incrediblecutz.herokuapp.com/users"  
 }).then((data)=>{
+
+    const barbers = data
     const name = document.getElementById("name");
 
     const hometown = document.getElementById("hometown");
@@ -26,15 +28,15 @@ $.ajax({
 
     let counter = 0;
 
-    console.log(data[counter].firstName)
+    console.log(barbers[counter].firstName)
 
-    setInterval((counter) => {
+    setInterval((counter, barbers) => {
 
-        name.innerText = data[counter].firstName + ' ' + data[counter].lastName;
+        name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
 
         counter += 1;
 
-        if(counter === data.length){
+        if(counter === barbers.length){
             counter = 0;
         }
         
