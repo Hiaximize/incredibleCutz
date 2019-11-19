@@ -100,13 +100,17 @@
               </div>
               
               <div id="barberInformation">
-                  <% for (var i =0; i < barbers.length; i++) { %>  
-                       
-                  <% } %>
-                  <p>Name: <%= barbers[5].firstName %></p>
-                  <p>Hometown: <%= barbers[5].hometown %></p>
-                  <p>Favorite Cut: barbers[5].favCut %></p>
-                  <p>What made me decide to start cutting hair: <%= barbers[5].whatMadeYouCutHair %></p>
+                <% counter = 0 %>
+                <% total = barbers.length %>
+
+                  <p>Name: <%= barbers[counter].firstName + ' ' + barbers[counter].lastName %></p>
+                  <p>Hometown: <%= barbers[counter].hometown %></p>
+                  <p>Favorite Cut: <%= barbers[counter].favCut %></p>
+                  <p>What made me decide to start cutting hair: <%= barbers[counter].whatMadeYouCutHair %></p>
+
+                  <%= total %>
+                  
+                  
               </div>
           <!-- </div> -->
       </div>
@@ -200,5 +204,6 @@
         }
       }
     </script>
+    <% include ./partials/JQuery.ejs %>
 </body>
 </html>
