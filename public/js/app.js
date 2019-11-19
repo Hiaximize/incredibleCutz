@@ -28,10 +28,11 @@ $.ajax({
 
     let counter = 0;
 
-    console.log(barbers[counter].firstName)
+    
 
     setInterval((counter, barbers) => {
 
+        console.log(barbers[counter].firstName)
         name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
 
         counter += 1;
