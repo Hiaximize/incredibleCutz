@@ -2,36 +2,63 @@
 <html lang="en">
 <head>
    <% include ../../partials/head.ejs %>
+   <link href="/css/newBarber.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Create New Barber</h1>
-        <form method="POST" action="/users">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName">
+    <div id="pageContainer">
+        <!-- <h1>Create New Barber</h1> -->
+        <div id="formContainer">
+            <div id="leftSide">
+                <img id="leftSideImage" src="/images/addNewCustomerImage.jpg">
+            </div>
+                <form method="POST" action="/users">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName">
 
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName">
+                    <br>
 
-            <label for="hometown">Hometown</label>
-            <input type="text" id="hometown" name="hometown">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName">
 
-            <label for="favCut">Favorite Cut</label>
-            <input type="text" id="favCut" name="favCut">
+                    <br>
 
-            <label for="whatMadeYouCutHair">WHat made you start cutting hair</label>
-            <input type="text" id="whatMadeYouCutHair" name="whatMadeYouCutHair">
+                    <label for="hometown">Hometown</label>
+                    <input type="text" id="hometown" name="hometown">
 
-            <label for="username">Username</label>
-            <input id="username" type="text" name="username" placeholder="Username" required>
+                    <br>
 
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" placeholder="Password" required>
-            
-            <!-- THIS WAS A BUTTON IN THE WALK THROUGH -->
-            <input type="submit" value="Create User">
-            <a href="/app/">Back to dashboard</a>
-        </form>
+                    <label for="favCut">Favorite Cut</label>
+                    <input type="text" id="favCut" name="favCut">
+
+                    <br>
+
+                    <label for="whatMadeYouCutHair">What made you start cutting hair</label><br>
+                    <textarea 
+                     id="whatMadeYouCutHair" name="whatMadeYouCutHair"></textarea>
+
+                    <br>
+
+                    <div id="loginInfo">
+                            <label for="username">Username</label>
+                            <input id="username" type="text" name="username" placeholder="Username" required>
+
+                            <br>
+
+                            <label for="password">Password</label>
+                            <input id="password" type="password" name="password" placeholder="Password" required>
+
+                            <br>
+                            
+                            <!-- THIS WAS A BUTTON IN THE WALK THROUGH -->
+                            <input type="submit" value="Create User">
+
+                            <br> 
+
+
+                            <a id="back" href="/app/">Back to dashboard</a>
+                    </div>
+                </form>
+        </div>
     </div>
 </body>
 </html>

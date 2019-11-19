@@ -53,7 +53,6 @@ body{
 #topLevelContainer{
     width: 98%;
     margin: 0 auto;
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
@@ -65,7 +64,6 @@ body{
 }
 #customerNotesContainer{
     min-width: 300px;
-    /* border: 1px solid purple; */
 }
 
 #customerNotes{
@@ -84,7 +82,6 @@ body{
     margin: 20px auto;
     border-radius: 20px;
     background-color: #e5e5e5;
-    border: 1px solid black;
     box-shadow: 10px 10px grey;
 }
 
@@ -98,7 +95,6 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px solid black;
     box-shadow: 10px 10px grey;
 }
 
