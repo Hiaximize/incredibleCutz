@@ -26,7 +26,7 @@ $.ajax({
 
     let counter = 0;
 
-    console.log(data[counter])
+    console.log(data[counter].firstName)
 
     setInterval((counter) => {
 
