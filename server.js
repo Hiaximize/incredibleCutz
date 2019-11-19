@@ -11,6 +11,7 @@ const session = require('express-session')
 const customerController = require('./controllers/customers.js')
 const Customer = require('./models/customers.js')
 const User = require('./models/users.js')
+const formidable = require('formidable')
 
 
 // MIDDLEWARE
