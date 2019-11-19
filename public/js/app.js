@@ -14,7 +14,7 @@ console.log("connected")
 
 $.ajax({
     method: "GET",
-    url: "http://incrediblecutz.herokuapp.com/users"
+    url: "incrediblecutz.herokuapp.com/users/"  
 }).then((data)=>{
     console.log(data)
 })
