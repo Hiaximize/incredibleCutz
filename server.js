@@ -25,6 +25,7 @@ app.use(session({
     saveUninitialized: false
 }))
 
+
 // DATABASE
 mongoose.connect(mongoURI, {useNewUrlParser: true})
 mongoose.connection.once('open', ()=>{
