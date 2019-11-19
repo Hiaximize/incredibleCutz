@@ -1,16 +1,17 @@
-console.log("connected")
+window.onscroll = function () { myFunction() }
 
+var header = document.getElementById("header")
+var sticky = header.offsetTop
 
-// const getInfo=(_id)=>{
-//     $.ajax({
-//         method: "GET",
-//         url: "http://incrediblecutz.herokuapp.com/customers/" +_id
-//     }).then((data) => {
-//         console.log($(this).id)
-//         console.log(data)
-//     })
-// }
-
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky")
+        header.classList.remove("nonSticky")
+    } else {
+        header.classList.remove("sticky")
+        header.classList.add("nonSticky")
+    }
+}
 
 
 let counter = 0;
@@ -41,10 +42,7 @@ $.ajax({
         counter += 1;
     }
 })    
-
-       
-        
-    }, 6000);
+}, 6000);
     
 
 

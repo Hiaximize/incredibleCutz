@@ -100,16 +100,11 @@
               </div>
               
               <div id="barberInformation">
-                <% counter = 0 %>
-                <% total = barbers.length %>
-
+  
                   Name: <p id="name"> </p>
                   Hometown:<p id="hometown"> </p>
                   Favorite Cut:<p id="favCut"> </p>
-                  What made me decide to start cutting hair:<p id="whyYouCutHair"> </p>
-
-                  <%= total %>
-                  
+                  Why I started cutting hair:<p id="whyYouCutHair"> </p>                  
                   
               </div>
           <!-- </div> -->
@@ -184,26 +179,7 @@
       <% include ./partials/footer.ejs %>
 
     </div>
-    <script>
-
-      
-       
-
-      window.onscroll = function() {myFunction()}
-
-      var header = document.getElementById("header")
-      var sticky = header.offsetTop
-      
-      function myFunction(){
-        if(window.pageYOffset > sticky){
-          header.classList.add("sticky")
-          header.classList.remove("nonSticky")
-        } else {
-          header.classList.remove("sticky")
-          header.classList.add("nonSticky")
-        }
-      }
-    </script>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="/js/app.js"></script>
