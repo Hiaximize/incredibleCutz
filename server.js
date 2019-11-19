@@ -11,6 +11,7 @@ const session = require('express-session')
 const customerController = require('./controllers/customers.js')
 const Customer = require('./models/customers.js')
 const User = require('./models/users.js')
+const formidable = require('formidable')
 
 
 // MIDDLEWARE
@@ -33,12 +34,16 @@ mongoose.connection.once('open', ()=>{
 mongoose.set('useFindAndModify', false)
 mongoose.set('useCreateIndex', true)
 
+User.find({}, (error, foundBarbers)=>{
 app.get('/', (req, resp)=>{
+    if(error){
+        resp.send(error)
+    } else {
     resp.render('index.ejs',
-    {currentUser: req.session.currentUser})
-  
+    {currentUser: req.session.currentUser, barbers: foundBarbers})
+    }
 })
-
+})
 
 app.get('/app', (req, resp)=>{
     User.find({}, (error, foundUsers)=>{
