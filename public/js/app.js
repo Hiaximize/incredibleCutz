@@ -31,8 +31,11 @@ $.ajax({
     const whyYouCutHair = document.getElementById("whyYouCutHair");
 
     name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
+    hometown.innerText = barbers[counter].hometown;
+    favCut.innerText = barbers[counter].favCut;
+    whyYouCutHair.innerText = barbers[counter].whyYouCutHair;
 
-    if (counter === barbers.length) {
+    if (counter === barbers.length-1) {
         counter = 0;
     } else { 
         counter += 1;
