@@ -12,6 +12,10 @@ console.log("connected")
 // }
 
 
+
+let counter = 0;
+
+setInterval(() => {
 $.ajax({
     method: "GET",
     url: "http://incrediblecutz.herokuapp.com/users"  
@@ -26,24 +30,20 @@ $.ajax({
 
     const whyYouCutHair = document.getElementById("whyYouCutHair");
 
-    let counter = 0;
+    name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
 
-    
-
-    setInterval((counter, barbers) => {
-
-        console.log(barbers[counter].firstName)
-        name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
-
+    if (counter === barbers.length) {
+        counter = 0;
+    } else { 
         counter += 1;
+    }
+})    
 
-        if(counter === barbers.length){
-            counter = 0;
-        }
+       
         
-    }, 3000);
+    }, 6000);
     
-})
+
 
 
 
