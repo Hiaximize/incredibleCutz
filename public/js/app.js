@@ -26,7 +26,7 @@ $.ajax({
 
     let counter = 0;
 
-    console.log(data)
+    console.log(data[0])
     
 })
 
