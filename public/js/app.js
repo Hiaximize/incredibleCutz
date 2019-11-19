@@ -28,11 +28,15 @@ $.ajax({
 
     console.log(data[counter])
 
-    setTimeout((counter) => {
+    setInterval((counter) => {
 
         name.innerText = data[counter].firstName + ' ' + data[counter].lastName;
 
         counter += 1;
+
+        if(counter === data.length){
+            counter = 0;
+        }
         
     }, 3000);
     
