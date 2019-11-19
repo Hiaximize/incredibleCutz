@@ -6,11 +6,15 @@
 </head>
 <body>
     <div id="pageContainer">
-        <!-- <h1>Create New Barber</h1> -->
-        <div id="formContainer">
+       
+        <div id="formContainer"></div>
             <div id="leftSide">
                 <img id="leftSideImage" src="/images/addNewCustomerImage.jpg">
             </div>
+
+        
+            <div id="rightSide">
+                <h1>Create New Barber</h1>
                 <form method="POST" action="/users">
                     <label for="firstName">First Name</label>
                     <input type="text" id="firstName" name="firstName">
@@ -34,31 +38,32 @@
 
                     <label for="whatMadeYouCutHair">What made you start cutting hair</label><br>
                     <textarea 
-                     id="whatMadeYouCutHair" name="whatMadeYouCutHair"></textarea>
+                        id="whatMadeYouCutHair" name="whatMadeYouCutHair"></textarea>
 
                     <br>
 
-                    <div id="loginInfo">
-                            <label for="username">Username</label>
-                            <input id="username" type="text" name="username" placeholder="Username" required>
+                    <label for="username">Username</label>
+                    <input id="username" type="text" name="username" placeholder="Username" required>
 
-                            <br>
+                    <br>
 
-                            <label for="password">Password</label>
-                            <input id="password" type="password" name="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" placeholder="Password" required>
 
-                            <br>
-                            
-                            <!-- THIS WAS A BUTTON IN THE WALK THROUGH -->
-                            <input type="submit" value="Create User">
+                    <br>
 
-                            <br> 
+                    <input type="submit" value="Create User">
+
+                    <br> 
 
 
-                            <a id="back" href="/app/">Back to dashboard</a>
-                    </div>
+                    <a id="back" href="/app/">Back to dashboard</a>
+                    
                 </form>
+            </div>
         </div>
+
+
     </div>
 </body>
 </html>
