@@ -100,12 +100,13 @@
               </div>
               
               <div id="barberInformation">
-                    
-                        <p>Name: </p>
-                        <p>Hometown: </p>
-                        <p>Favorite Cut: </p>
-                        <p>What made me decide to start cutting hair: </p>
-                  
+                  <% for (var i =0; i < barbers.length; i++) { %>  
+                       
+                  <% } %>
+                  <p>Name: <%= barbers[5].firstName %></p>
+                  <p>Hometown: <%= barbers[5].hometown %></p>
+                  <p>Favorite Cut: barbers[5].favCut %></p>
+                  <p>What made me decide to start cutting hair: <%= barbers[5].whatMadeYouCutHair %></p>
               </div>
           <!-- </div> -->
       </div>
