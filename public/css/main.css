@@ -1,7 +1,7 @@
 html{
     -webkit-overflow-scrolling: none;
     overflow-x: hidden;
-    
+    font-family: 'Calistoga', cursive;
     
     cursor: url("https://downloads.totallyfreecursors.com/cursor_files/scissors.ani"), url("https://downloads.totallyfreecursors.com/thumbnails/scissors.gif"), auto;
 
@@ -15,6 +15,7 @@ html{
     background-color: black;
     padding: 4px;
     font-size: 20px;
+    border-radius: 2px;
 }
 
 #menuItems{
@@ -181,7 +182,16 @@ a{
 }
 
 #footer{
+    display: flex;
+    justify-content: space-between;
     height: 100px;
+    background-color: black;
+    color: #7fff00;
+}
+
+#footer a{
+    color: #7fff00;
+    margin-left: 5px;
 }
 
 #dashboard{
