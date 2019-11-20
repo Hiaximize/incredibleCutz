@@ -34,7 +34,7 @@ $.ajax({
     name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
     hometown.innerText = barbers[counter].hometown;
     favCut.innerText = barbers[counter].favCut;
-    whyYouCutHair.innerText = barbers[counter].whyYouCutHair;
+    whyYouCutHair.innerText = barbers[counter].whatMadeYouCutHair;
 
     if (counter === barbers.length-1) {
         counter = 0;
