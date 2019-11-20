@@ -167,7 +167,7 @@ a{
 .barberInfo{
     margin-left: 20px;
     font-size: 22px;
-    /* border: 1px solid black; */
+    font-style: italic;
 }
 
 .serviceImage{
