@@ -168,6 +168,7 @@ a{
     margin-left: 20px;
     padding-left: 30px;
     font-size: 22px;
+    border: 1px solid black;
 }
 
 .serviceImage{
