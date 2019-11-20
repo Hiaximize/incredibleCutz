@@ -218,7 +218,28 @@ text{
 }
 
 #whyYouCutHair{
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+#barberHours{
+    font-size: 20px;
+    border: 2px solid #4ca64c;
+    height: 100%;
+    border-radius: 4px;
+}
+
+#barbersHours{
+    
+    padding: 4px; 
+}
+
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+td{
+    padding: 10px;
 }
 
 hr{
