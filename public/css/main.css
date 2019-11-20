@@ -164,11 +164,10 @@ a{
     flex-direction: column;
 }
 
-#barberInfo{
-    margin-left: 200px;
-    padding-left: 30px;
+.barberInfo{
+    margin-left: 20px;
     font-size: 22px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .serviceImage{
