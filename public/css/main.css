@@ -166,6 +166,8 @@ a{
 
 #barberInfo{
     margin-left: 20px;
+    padding-left: 30px;
+    font-size: 22px;
 }
 
 .serviceImage{
@@ -196,6 +198,10 @@ a{
 
 #dashboard:hover{
     color: green;
+}
+
+text{
+    font-size: 25px;
 }
 
 
