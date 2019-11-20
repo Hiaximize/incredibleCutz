@@ -189,6 +189,16 @@ a{
     color: #7fff00;
 }
 
+#facebook{
+    width: 25px;
+    height: 25px;
+}
+
+#instagram{
+    width: 25px;
+    height: 25px;
+}
+
 #footer a{
     color: #7fff00;
     margin-left: 5px;
@@ -209,4 +219,13 @@ text{
 
 #whyYouCutHair{
     margin-top: 10px;
+}
+
+hr{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: black;
 }
