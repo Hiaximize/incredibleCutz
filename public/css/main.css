@@ -226,6 +226,7 @@ text{
     border: 2px solid #4ca64c;
     height: 100%;
     border-radius: 4px;
+    width: 300px;
 }
 
 #barbersHours{
