@@ -148,7 +148,7 @@ a{
     margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 #barberImageContainer{
     width: 400px;
@@ -169,7 +169,7 @@ a{
 }
 
 .barberInfo{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-size: 22px;
     font-style: italic;
     letter-spacing: 2px; 
