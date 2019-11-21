@@ -55,7 +55,7 @@ $.ajax({
     method: "GET",
     url: "http://incrediblecutz.herokuapp.com/users"  
 }).then((data)=>{
-
+    barbers = data
     name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
     hometown.innerText = barbers[counter].hometown;
     favCut.innerText = barbers[counter].favCut;
