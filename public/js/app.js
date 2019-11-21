@@ -31,22 +31,21 @@ const getBarbers = () => {
         method: "GET",
         url: "http://incrediblecutz.herokuapp.com/users"
     }).then((data)=>{
-        barbers = data
-        return barbers
+        barbers = data;
+        name.innerText = barbers[0].firstName + ' ' + barbers[0].lastName;
+        hometown.innerText = barbers[0].hometown;
+        favCut.innerText = barbers[0].favCut;
+        whyYouCutHair.innerText = barbers[0].whatMadeYouCutHair;
+        monday.innerText = barbers[0].monday;
+        tuesday.innerText = barbers[0].tuesday;
+        wednesday.innerText = barbers[0].wednesday;
+        thursday.innerText = barbers[0].thursday;
+        friday.innerText = barbers[0].friday;
+        saturday.innerText = barbers[0].saturday;
+        sunday.innerText = barbers[0].sunday;
     })
 }
-getBarbers();
-name.innerText = barbers[0].firstName + ' ' + barbers[0].lastName;
-hometown.innerText = barbers[0].hometown;
-favCut.innerText = barbers[0].favCut;
-whyYouCutHair.innerText = barbers[0].whatMadeYouCutHair;
-monday.innerText = barbers[0].monday;
-tuesday.innerText = barbers[0].tuesday;
-wednesday.innerText = barbers[0].wednesday;
-thursday.innerText = barbers[0].thursday;
-friday.innerText = barbers[0].friday;
-saturday.innerText = barbers[0].saturday;
-sunday.innerText = barbers[0].sunday;
+
 
 let counter = 0;
 const pictureArray = ["/images/johnnyFigueroa.jpg", "/images/johnnyBarber.jpg", "/images/juan.jpg"]
