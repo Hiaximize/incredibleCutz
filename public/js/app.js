@@ -13,6 +13,31 @@ function myFunction() {
     }
 }
 
+const barbers = data;
+const name = document.getElementById("name");
+const hometown = document.getElementById("hometown");
+const favCut = document.getElementById("favCut");
+const whyYouCutHair = document.getElementById("whyYouCutHair");
+const monday = document.getElementById("monday");
+const tuesday = document.getElementById("tuesday");
+const wednesday = document.getElementById("wednesday");
+const thursday = document.getElementById("thursday");
+const friday = document.getElementById("friday");
+const saturday = document.getElementById("saturday");
+const sunday = document.getElementById("sunday");
+const barberImage = document.getElementById("barberImage").scr = pictureArray[counter];
+
+name.innerText = barbers[0].firstName + ' ' + barbers[0].lastName;
+hometown.innerText = barbers[0].hometown;
+favCut.innerText = barbers[0].favCut;
+whyYouCutHair.innerText = barbers[0].whatMadeYouCutHair;
+monday.innerText = barbers[0].monday;
+tuesday.innerText = barbers[0].tuesday;
+wednesday.innerText = barbers[0].wednesday;
+thursday.innerText = barbers[0].thursday;
+friday.innerText = barbers[0].friday;
+saturday.innerText = barbers[0].saturday;
+sunday.innerText = barbers[0].sunday;
 
 let counter = 0;
 const pictureArray = ["/images/johnnyFigueroa.jpg", "/images/johnnyBarber.jpg", "/images/juan.jpg"]
@@ -22,20 +47,6 @@ $.ajax({
     method: "GET",
     url: "http://incrediblecutz.herokuapp.com/users"  
 }).then((data)=>{
-
-    const barbers = data;
-    const name = document.getElementById("name");
-    const hometown = document.getElementById("hometown");
-    const favCut = document.getElementById("favCut");
-    const whyYouCutHair = document.getElementById("whyYouCutHair");
-    const monday = document.getElementById("monday");
-    const tuesday = document.getElementById("tuesday");
-    const wednesday = document.getElementById("wednesday");
-    const thursday = document.getElementById("thursday");
-    const friday = document.getElementById("friday");
-    const saturday = document.getElementById("saturday");
-    const sunday = document.getElementById("sunday");
-    const barberImage = document.getElementById("barberImage").scr = pictureArray[counter];
 
     name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
     hometown.innerText = barbers[counter].hometown;
@@ -48,7 +59,7 @@ $.ajax({
     friday.innerText = barbers[counter].friday;
     saturday.innerText = barbers[counter].saturday;
     sunday.innerText = barbers[counter].sunday;
-    // barberImage.attr("src", "/images/juan.jpg");
+    
 
     if (counter === barbers.length-1) {
         counter = 0;
