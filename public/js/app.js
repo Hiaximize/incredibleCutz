@@ -15,6 +15,7 @@ function myFunction() {
 
 
 let counter = 0;
+const pictureArray = ["/images/johnnyFigueroa.jpg", "/images/johnnyBarber.jpg", "/images/juan.jpg"]
 
 setInterval(() => {
 $.ajax({
@@ -34,6 +35,7 @@ $.ajax({
     const friday = document.getElementById("friday");
     const saturday = document.getElementById("saturday");
     const sunday = document.getElementById("sunday");
+    const barberImage = document.getElementById("barberImage").scr = pictureArray[counter];
 
     name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
     hometown.innerText = barbers[counter].hometown;
@@ -46,6 +48,7 @@ $.ajax({
     friday.innerText = barbers[counter].friday;
     saturday.innerText = barbers[counter].saturday;
     sunday.innerText = barbers[counter].sunday;
+    // barberImage.attr("src", "/images/juan.jpg");
 
     if (counter === barbers.length-1) {
         counter = 0;
