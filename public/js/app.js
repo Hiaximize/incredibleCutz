@@ -13,7 +13,6 @@ function myFunction() {
     }
 }
 
-const barbers = data;
 const name = document.getElementById("name");
 const hometown = document.getElementById("hometown");
 const favCut = document.getElementById("favCut");
@@ -25,8 +24,18 @@ const thursday = document.getElementById("thursday");
 const friday = document.getElementById("friday");
 const saturday = document.getElementById("saturday");
 const sunday = document.getElementById("sunday");
-const barberImage = document.getElementById("barberImage").scr = pictureArray[counter];
+// const barberImage = document.getElementById("barberImage").scr = pictureArray[counter];
 
+const getBarbers = () => {
+    $.ajax({
+        method: "GET",
+        url: "http://incrediblecutz.herokuapp.com/users"
+    }).then((data)=>{
+        barbers = data
+        return barbers
+    })
+}
+getBarbers();
 name.innerText = barbers[0].firstName + ' ' + barbers[0].lastName;
 hometown.innerText = barbers[0].hometown;
 favCut.innerText = barbers[0].favCut;
