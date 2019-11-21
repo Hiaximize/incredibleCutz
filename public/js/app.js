@@ -22,19 +22,30 @@ $.ajax({
     url: "http://incrediblecutz.herokuapp.com/users"  
 }).then((data)=>{
 
-    const barbers = data
+    const barbers = data;
     const name = document.getElementById("name");
-
     const hometown = document.getElementById("hometown");
-
     const favCut = document.getElementById("favCut");
-
     const whyYouCutHair = document.getElementById("whyYouCutHair");
+    const monday = document.getElementById("monday");
+    const tuesday = document.getElementById("tuesday");
+    const wednesday = document.getElementById("wednesday");
+    const thursday = document.getElementById("thursday");
+    const friday = document.getElementById("friday");
+    const saturday = document.getElementById("saturday");
+    const sunday = document.getElementById("sunday");
 
     name.innerText = barbers[counter].firstName + ' ' + barbers[counter].lastName;
     hometown.innerText = barbers[counter].hometown;
     favCut.innerText = barbers[counter].favCut;
     whyYouCutHair.innerText = barbers[counter].whatMadeYouCutHair;
+    monday.innerText = barbers[counter].monday;
+    tuesday.innerText = barbers[counter].tuesday;
+    wednesday.innerText = barbers[counter].wednesday;
+    thursday.innerText = barbers[counter].thursday;
+    friday.innerText = barbers[counter].friday;
+    saturday.innerText = barbers[counter].saturday;
+    sunday.innerText = barbers[counter].sunday;
 
     if (counter === barbers.length-1) {
         counter = 0;
@@ -42,7 +53,7 @@ $.ajax({
         counter += 1;
     }
 })    
-}, 6000);
+}, 8000);
     
 
 
