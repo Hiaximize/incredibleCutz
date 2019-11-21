@@ -221,14 +221,16 @@ text{
     margin-top: 20px;
 }
 
+/* THIS IS DIFFERENT THAN THE ONE BELOW */
 #barberHours{
     font-size: 20px;
     border: 2px solid #4ca64c;
     height: 100%;
     border-radius: 4px;
-    width: 300px;
+    width: 260px;
 }
 
+/* THIS IS DIFFERENT THAN THE ONE ABOVE */
 #barbersHours{
     
     padding: 4px; 
