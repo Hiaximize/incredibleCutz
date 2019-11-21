@@ -253,3 +253,7 @@ hr{
     border-radius: 4px;
     background-color: black;
 }
+
+.hours{
+    padding-left: 20px;
+}
